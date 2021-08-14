@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="onNewsecurity()">New security</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-security-item
+        *ngFor="let securityEl of securitys; let i = index"
+        [security]="securityEl"
+        [index]="i"></app-security-item>
+    </div>
+  </div>
+  
+  

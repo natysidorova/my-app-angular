@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-10">
+      <app-blaming-edit></app-blaming-edit>
+      <hr>
+      <ul class="list-group">
+        <a
+          class="list-group-item"
+          style="cursor: pointer"
+          *ngFor="let subjection of (subjections|async).subjections; let i = index"
+          (click)="onEditItem(i)"
+        >
+          {{ subjection.name }} ({{ subjection.amount }})
+        </a>
+      </ul>
+    </div>
+  </div>
+  
