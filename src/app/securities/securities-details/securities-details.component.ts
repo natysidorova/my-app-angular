@@ -33,7 +33,7 @@ export class SecurityDetailComponent implements OnInit {
     map(securitysState=>{
       return //securitysState.sec.find((security,index)=>{index===this.id})
     }))
-      .subscribe(security=>{
+      .subscribe((security: Security)=>{
         this.security = security;
       }
         );
@@ -43,7 +43,6 @@ export class SecurityDetailComponent implements OnInit {
     //this.securityService.addIngredientsToShoppingList(this.security.ingredients);
     this.store.dispatch(new BlamingListActions.AddSubjections(this.security.subjections));
   }
-
   onEditsecurity() {
     this.router.navigate(['edit'], {relativeTo: this.route});
     // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
